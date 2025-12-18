@@ -92,5 +92,9 @@ I ran aggregate experiments across multiple seeds and plotted mean ± std of ban
 - Built simulation tools to compare flat vs count vs learned policies and saved plots under `plots/`. 📈
 - Ran full aggregate experiments (5 repeats, train=2000 episodes, eval=20000 hands) and saved the aggregated plot `plots/tournament_agg_5x2000_20k.png`.
 
-If you'd like, I can also commit the final plot into a `docs/` directory and generate a short HTML report summarizing the numeric results.
+I generated a short HTML report that summarizes numeric results (mean ± std of final bankroll across runs) and embeds the aggregate plot. You can view it at:
+
+- `reports/summary.html` (project lead: **lettucejuice04**; assisted by **GitHub Copilot (Raptor mini)**)
+
+If you'd like, I can also commit the final plot into a `docs/` directory and generate additional reports or CSV summaries of per-seed results.
 
