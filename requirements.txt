@@ -1,0 +1,8 @@
+# Core dependencies for RL-blackjack
+torch==2.9.1
+stable-baselines3==2.7.1
+gymnasium==1.2.2
+numpy==2.3.5
+tensorboard==2.20.0
+matplotlib==3.10.8
+pandas==2.3.3
