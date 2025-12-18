@@ -41,7 +41,7 @@ python -m pip install -r requirements.txt
 
 ---
 
-## Getting started with this implementation ✅
+## Getting started with this implementation
 
 - `src/blackjack/env.py`: Minimal Blackjack environment with a Hi-Lo running count and deterministic deck injection for tests.
 - `src/blackjack/agent.py`: A small tabular Q-learning agent that uses a binned true count as part of the state.
@@ -60,7 +60,7 @@ To run the demo training:
 python main.py
 ```
 
-## Card-counting simulation 🔎
+## Card-counting simulation
 
 A small simulator is provided at `scripts/simulate_counting.py` which compares a flat-bet strategy with a simple count-based betting ramp. It runs `N` hands, tracks bankroll, and saves a plot at `plots/count_vs_flat.png`.
 
@@ -71,9 +71,9 @@ python scripts/simulate_counting.py --hands 10000 --seed 42 --out plots/count_vs
 
 ---
 
-## Tournament & aggregated results 📊
+## Tournament & aggregated results
 
-We ran a tournament where a **bet-aware RL agent** (learns both bet and hit/stick policy) was trained and compared to:
+I ran a tournament where a **bet-aware RL agent** (learns both bet and hit/stick policy) was trained and compared to:
 - A **flat-bet baseline** (fixed bet), and
 - A **count-based betting** rule (simple ramp by true count).
 
@@ -83,18 +83,15 @@ I ran aggregate experiments across multiple seeds and plotted mean ± std of ban
 
 ---
 
-## What we completed together ✅
+## Summary
 
-- Implemented a minimal Blackjack environment with Hi-Lo running count (`src/blackjack/env.py`). 🔧
-- Added a tabular Q-learning agent and a **bet-aware** extension (`src/blackjack/agent.py`). 🤖
-- Wrote training loops (`src/blackjack/train.py`) and a small demo (`main.py`). ▶️
-- Added robust tests for env, agents, training, simulation, tournament, and aggregation (`tests/`). ✅
-- Built simulation tools to compare flat vs count vs learned policies and saved plots under `plots/`. 📈
+- Implemented a minimal Blackjack environment with Hi-Lo running count (`src/blackjack/env.py`).
+- Added a tabular Q-learning agent and a **bet-aware** extension (`src/blackjack/agent.py`).
+- Wrote training loops (`src/blackjack/train.py`) and a small demo (`main.py`).
+- Added robust tests for env, agents, training, simulation, tournament, and aggregation (`tests/`).
+- Built simulation tools to compare flat vs count vs learned policies and saved plots under `plots/`.
 - Ran full aggregate experiments (5 repeats, train=2000 episodes, eval=20000 hands) and saved the aggregated plot `plots/tournament_agg_5x2000_20k.png`.
 
 I generated a short HTML report that summarizes numeric results (mean ± std of final bankroll across runs) and embeds the aggregate plot. You can view it at:
 
-- `reports/summary.html` (project lead: **lettucejuice04**; assisted by **GitHub Copilot (Raptor mini)**)
-
-If you'd like, I can also commit the final plot into a `docs/` directory and generate additional reports or CSV summaries of per-seed results.
-
+- `reports/summary.html` 
